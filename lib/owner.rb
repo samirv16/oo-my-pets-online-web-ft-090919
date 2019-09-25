@@ -5,7 +5,7 @@ class Owner
   
   @@all = []
   @@count = 0
-  @@pets = {cats: [], dogs: []}
+
   
   
   def initialize(name)
@@ -13,6 +13,7 @@ class Owner
     @species = "human"
     @@all << self
     @@count += 1
+    @@pets = {cats: [], dogs: []}
   end
   
   def say_species
