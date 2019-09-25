@@ -5,6 +5,8 @@ class Owner
   
   @@all = []
   @@count = 0
+  @@pets
+  
   
   def initialize(name)
     @name = name
@@ -52,6 +54,11 @@ class Owner
   def feed_cats
     Cat.all.each { |cat| cat.mood = "happy" }
   end
+  
+  def list_pets
+    "I have #{"
+    
+  end 
   
   def sell_pets
     Dog.all.each { |dog| dog.mood = "nervous" }
