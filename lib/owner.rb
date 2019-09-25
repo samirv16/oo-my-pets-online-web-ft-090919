@@ -3,7 +3,6 @@ class Owner
   
   attr_reader :name, :species
   
-  @@pets = {:dogs => [], :cats => []}
   @@all = []
   @@count = 0
   
@@ -53,6 +52,10 @@ class Owner
   def feed_cats
     Cat.all.each { |cat| cat.mood = "happy" }
   end
+  
+  def sell_pets
+    Dog.all
+  end 
   
   
 end
