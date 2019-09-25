@@ -13,7 +13,6 @@ class Owner
     @species = "human"
     @@all << self
     @@count += 1
-    @@pets = {cats: [], dogs: []}
   end
   
   def say_species
@@ -41,11 +40,11 @@ class Owner
   end
   
   def buy_cat(name)
-   @@pets[:cats] << Cat.new(name, self)
+    Cat.new(name, self)
   end
   
   def buy_dog(name)
-    @@pets[:dogs} << Dog.new(name, self)
+     Dog.new(name, self)
   end
   
   def walk_dogs
@@ -57,8 +56,7 @@ class Owner
   end
   
   def list_pets
-     "I have #{@@pets[:dogs]}dog(s), and #{@@pets[:cats]} cat(s)."
-    
+     
   end 
   
   def sell_pets
